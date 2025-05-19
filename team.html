@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ActFinLab - Προσωπικό</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTT5GMFZ6D "></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,78 +14,8 @@
     gtag('config', 'G-BTT5GMFZ6D');
   </script>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #fff;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #007bff;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #333;
-      overflow: hidden;
-    }
-
-    nav a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      background-color: #575757;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    h2 {
-      color: #007bff;
-      margin-top: 40px;
-    }
-
-    .team-member {
-      background-color: #f9f9f9;
-      border-left: 4px solid #007bff;
-      padding: 15px 20px;
-      margin-bottom: 20px;
-      border-radius: 5px;
-    }
-
-    .team-member h5 {
-      margin-bottom: 10px;
-      color: #007bff;
-    }
-
-    .team-member p strong {
-      color: #333;
-    }
-
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -94,12 +24,16 @@
     <p>Εργαστήριο Αναλογιστικών &amp; Χρηματοοικονομικών Μαθηματικών</p>
   </header>
 
-  <nav>
-    <a href="index.html">Αρχική</a>
-    <a href="team.html" class="active">Προσωπικό</a>
-    <a href="courses.html">Μαθήματα</a>
-    <a href="objective.html">Σκοπός</a>
-    <a href="contact.html">Επικοινωνία</a>
+  <nav class="navbar">
+    <div class="navbar-brand">ActFinLab</div>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Αρχική</a></li>
+      <li><a href="team.html" class="active">Προσωπικό</a></li>
+      <li><a href="courses.html">Μαθήματα</a></li>
+      <li><a href="objective.html">Σκοπός</a></li>
+      <li><a href="contact.html">Επικοινωνία</a></li>
+    </ul>
   </nav>
 
   <div class="container">
@@ -134,6 +68,16 @@
   <footer>
     <p>&copy; 2025 ActFinLab – Πανεπιστήμιο Αιγαίου</p>
   </footer>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>

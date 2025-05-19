@@ -11,7 +11,7 @@ body {
   line-height: 1.6;
   background-color: #ffffff;
   color: #333333;
-  padding-top: 60px; /* για να μην κρύβεται το header από το fixed navbar */
+  padding-top: 60px; /* για fixed navbar */
 }
 
 /* Header */
@@ -22,93 +22,82 @@ header {
   text-align: center;
 }
 
-header h1 {
-  margin-bottom: 10px;
-}
-
 /* Navigation */
-nav {
-  background-color: #333333;
+.navbar {
+  background-color: #333;
   overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
 
-nav a {
-  float: left;
-  display: block;
+.navbar-brand {
   color: white;
-  text-align: center;
-  padding: 14px 20px;
+  font-size: 1.2rem;
   text-decoration: none;
 }
 
-nav a:hover {
-  background-color: #575757;
+.hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
 }
 
-nav a.active {
-  background-color: #007bff;
-}
-
-/* Main Content Container */
-.container {
-  max-width: 960px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* Headings */
-h2 {
-  color: #007bff;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-
-h3 {
-  color: #007bff;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-/* Links */
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Lists */
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 10px;
+.nav-menu {
   list-style: none;
-  position: relative;
-  padding-left: 25px;
+  display: flex;
+  gap: 20px;
 }
 
-li::before {
-  content: "✔";
-  color: green;
-  position: absolute;
-  left: 0;
-}
-
-/* Footer */
-footer {
-  background-color: #222222;
+.nav-menu li a {
   color: white;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  text-decoration: none;
+  padding: 14px 0;
+  display: inline-block;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #007bff;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-menu.active {
+    max-height: 300px;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu li a {
+    display: block;
+    padding: 15px;
+  }
 }
