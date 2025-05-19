@@ -71,3 +71,46 @@ a {
 a:hover {
   text-decoration: underline;
 }
+body {
+  padding-top: 70px;
+}
+/* Light Mode Defaults */
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+  background-color: #fff;
+  color: #212529;
+  border: none;
+}
+
+.bg-dark {
+  background-color: #343a40 !important;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+body.dark-mode .card {
+  background-color: #1f1f1f;
+  color: #f8f9fa;
+}
+
+body.dark-mode .bg-dark {
+  background-color: #212121 !important;
+}
+
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
