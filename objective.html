@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ActFinLab - Σκοπός του Εργαστηρίου</title>
+  <title>ActFinLab - Σκοπός</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTT5GMFZ6D "></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,94 +16,6 @@
     gtag('js', new Date());
     gtag('config', 'G-BTT5GMFZ6D');
   </script>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #fff;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #007bff;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #333;
-      overflow: hidden;
-    }
-
-    nav a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      background-color: #575757;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    h2 {
-      color: #007bff;
-      margin-top: 40px;
-    }
-
-    h3 {
-      color: #007bff;
-      margin-top: 20px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-      list-style: none;
-      position: relative;
-      padding-left: 25px;
-    }
-
-    li::before {
-      content: "✔";
-      color: green;
-      position: absolute;
-      left: 0;
-    }
-
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
 
@@ -109,12 +24,16 @@
     <p>Εργαστήριο Αναλογιστικών &amp; Χρηματοοικονομικών Μαθηματικών</p>
   </header>
 
-  <nav>
-    <a href="index.html">Αρχική</a>
-    <a href="team.html">Προσωπικό</a>
-    <a href="courses.html">Μαθήματα</a>
-    <a href="objective.html" class="active">Σκοπός</a>
-    <a href="contact.html">Επικοινωνία</a>
+  <nav class="navbar">
+    <div class="navbar-brand">ActFinLab</div>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html">Αρχική</a></li>
+      <li><a href="team.html">Προσωπικό</a></li>
+      <li><a href="courses.html">Μαθήματα</a></li>
+      <li><a href="objective.html" class="active">Σκοπός</a></li>
+      <li><a href="contact.html">Επικοινωνία</a></li>
+    </ul>
   </nav>
 
   <div class="container">
@@ -122,9 +41,8 @@
 
     <p>
       Το εργαστήριο Αναλογιστικών και Χρηματοοικονομικών Μαθηματικών ιδρύθηκε με το Π.Δ. 323 
-      (<a href="https://www.actuar.aegean.gr/images/articles/ φεκ_ίδρυσης_19.11.2002.pdf" target="_blank">
-        ΦΕΚ, Τεύχος Α, 19.11.2002
-      </a>) και εξυπηρετεί εκπαιδευτικές και ερευνητικές ανάγκες στα γνωστικά αντικείμενα της Αναλογιστικής και Χρηματοοικονομικής Επιστήμης.
+      (<a href="https://www.actuar.aegean.gr/images/articles/ φεκ_ίδρυσης_19.11.2002.pdf" target="_blank">ΦΕΚ, Τεύχος Α, 19.11.2002</a>)
+      και εξυπηρετεί εκπαιδευτικές και ερευνητικές ανάγκες στα γνωστικά αντικείμενα της Αναλογιστικής και Χρηματοοικονομικής Επιστήμης.
     </p>
 
     <h3>Οι βασικοί σκοποί του εργαστηρίου είναι:</h3>
@@ -151,6 +69,16 @@
   <footer>
     <p>&copy; 2025 ActFinLab – Πανεπιστήμιο Αιγαίου</p>
   </footer>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
