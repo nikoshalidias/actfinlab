@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<link rel="stylesheet" href="style.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ActFinLab - Αρχική</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTT5GMFZ6D "></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,51 +16,6 @@
     gtag('js', new Date());
     gtag('config', 'G-BTT5GMFZ6D');
   </script>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #fff;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #007bff;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #333;
-      overflow: hidden;
-    }
-    nav a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background-color: #575757;
-    }
-    .container {
-      padding: 20px;
-      max-width: 960px;
-      margin: auto;
-    }
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
 </head>
 <body>
 
@@ -67,26 +24,17 @@
     <p>Εργαστήριο Αναλογιστικών &amp; Χρηματοοικονομικών Μαθηματικών</p>
   </header>
 
-  <nav>
-    <a href="#">Αρχική</a>
-    <a href="team">Προσωπικό</a>
-    <a href="courses">Μαθήματα</a>
-    <a href="objective">Σκοπός</a>
-    <a href="contact">Επικοινωνία</a>
+  <nav class="navbar">
+    <div class="navbar-brand">ActFinLab</div>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="index.html" class="active">Αρχική</a></li>
+      <li><a href="team.html">Προσωπικό</a></li>
+      <li><a href="courses.html">Μαθήματα</a></li>
+      <li><a href="objective.html">Σκοπός</a></li>
+      <li><a href="contact.html">Επικοινωνία</a></li>
+    </ul>
   </nav>
 
   <div class="container">
-    <h2>Γιατί να μας επισκεφθείτε;</h2>
-    <p>
-      Το ActFinLab είναι το εργαστήριο της Αναλογιστικής &amp; Χρηματοοικονομικής Επιστήμης στο Πανεπιστήμιο Αιγαίου.
-      Στοχεύουμε στην προώθηση της έρευνας και της εκπαίδευσης στους τομείς της Ασφαλιστικής Επιστήμης, 
-      των Χρηματοοικονομικών Μαθηματικών και της Διαχείρισης Κινδύνου.
-    </p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 ActFinLab – Πανεπιστήμιο Αιγαίου</p>
-  </footer>
-
-</body>
-</html>
+    <h2>Γιατ
