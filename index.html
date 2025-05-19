@@ -41,28 +41,12 @@
       <h5 id="visitor-count" class="display-6 text-warning">0</h5>
     </div>
 
-   <!-- Weather Widget -->
-<script>
-  fetch('https://api.weatherapi.com/v1/current.json?key=98397ae8da42412c823150255251905&q=Samos ')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      const temp = data.current_condition[0].temp_C;
-      const condition = data.current_condition[0].weatherDesc[0].value;
-      document.getElementById("weather-info").innerHTML = `
-        <strong>${temp}°C</strong><br>
-        ${condition}
-      `;
-    })
-    .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
-      document.getElementById("weather-info").innerHTML = `<strong>N/A</strong><br>Καιρός`;
-    });
-</script>
+    <!-- Weather Widget -->
+    <div class="mt-4 p-3 bg-light text-dark rounded shadow-sm weather-widget text-center">
+      <h6 class="mb-1">Καιρός - Σάμος</h6>
+      <p class="mb-0" id="weather-info">Φόρτωση...</p>
+    </div>
+  </div>
 
   <!-- Main Content -->
   <div class="flex-grow-1">
@@ -134,14 +118,25 @@
     document.getElementById('visitor-count').innerText = count;
   </script>
 
-  <!-- Weather Widget (Static Version) -->
+  <!-- Weather Widget -->
   <script>
-    window.onload = () => {
-      // Εμφανίζουμε dummy weather info
-      const temp = "22°C";
-      document.getElementById("weather-info").innerHTML = `<strong>${temp}</strong><br>Σάμος`;
-    };
+    fetch('https://api.weatherapi.com/v1/current.json?key=98397ae8da42412c823150255251905&q=Samos ')
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+      })
+      .then(data => {
+        const temp = data.current_condition[0].temp_C;
+        const condition = data.current_condition[0].weatherDesc[0].value;
+        document.getElementById("weather-info").innerHTML = `
+          <strong>${temp}°C</strong><br>
+          ${condition}
+        `;
+      })
+      .catch(error => {
+        console.error('Weather API error:', error);
+        document.getElementById("weather-info").innerHTML = `<strong>N/A</strong><br>Καιρός`;
+      });
   </script>
 </body>
 </html>
-fetch('https://api.weatherapi.com/v1/current.json?key=98397ae8da42412c823150255251905&q=Samos ')
