@@ -3,10 +3,20 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: #333;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #222;
+  font-weight: bold;
+}
+
+a {
+  color: #007bff;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 /* Navbar */
@@ -17,29 +27,81 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero {
-  background: url('hero.jpg') no-repeat center center/cover;
+  background: url('hero.jpg') no-repeat center center / cover;
   color: white;
   padding: 100px 0;
   text-align: center;
 }
 
-.hero .btn {
-  margin: 10px 10px;
+.hero .btn-lg-rounded {
+  border-radius: 30px;
 }
 
-/* Buttons */
-.btn-lg-rounded {
-  border-radius: 30px;
+/* Clock Styles */
+.clock-container {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+}
+
+.clock {
+  width: 200px;
+  height: 200px;
+  border: 10px solid #333;
+  border-radius: 50%;
+  position: relative;
+  background: white;
+}
+
+.hand {
+  width: 50%;
+  height: 4px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.1s linear;
+}
+
+.hour {
+  height: 6px;
+  background: #333;
+}
+.minute {
+  height: 4px;
+}
+.second {
+  height: 2px;
+  background: red;
+}
+
+.center-pin {
+  width: 10px;
+  height: 10px;
+  background: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+/* Visitor Counter */
+#visitor-count {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #007bff;
 }
 
 /* Cards */
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
@@ -52,59 +114,23 @@ footer {
   color: #ccc;
   padding: 20px 0;
 }
-
 footer a {
   color: #ccc;
   text-decoration: none;
 }
-
 footer a:hover {
   color: #f8f9fa;
 }
 
-/* Links */
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-body {
-  padding-top: 70px;
-}
-/* Light Mode Defaults */
-body {
-  background-color: #f8f9fa;
-  color: #212529;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.card {
-  background-color: #fff;
-  color: #212529;
-  border: none;
-}
-
-.bg-dark {
-  background-color: #343a40 !important;
-}
-
-footer {
-  background-color: #1a1a1a;
-  color: #ccc;
-}
-
 /* Dark Mode Styles */
 body.dark-mode {
-  background-color: #121212;
-  color: #f8f9fa;
+  background-color: #121212 !important;
+  color: #f8f9fa !important;
 }
 
 body.dark-mode .card {
-  background-color: #1f1f1f;
-  color: #f8f9fa;
+  background-color: #1f1f1f !important;
+  color: #f8f9fa !important;
 }
 
 body.dark-mode .bg-dark {
@@ -112,5 +138,27 @@ body.dark-mode .bg-dark {
 }
 
 body.dark-mode footer {
-  background-color: #1e1e1e;
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode .clock {
+  background: #1f1f1f;
+  border-color: #aaa;
+}
+
+body.dark-mode .hand {
+  background: #ddd;
+}
+
+body.dark-mode .second {
+  background: #ef6666;
+}
+
+body.dark-mode .center-pin {
+  background: #ddd;
+}
+
+/* Padding for Sticky Nav */
+body {
+  padding-top: 70px;
 }
