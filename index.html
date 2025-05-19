@@ -1,142 +1,92 @@
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BTT5GMFZ6D "></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-BTT5GMFZ6D');
-</script>
-
 <!DOCTYPE html>
 <html lang="el">
 <head>
+<link rel="stylesheet" href="style.css">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ActFinLab - Αρχική</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap @5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTT5GMFZ6D "></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BTT5GMFZ6D');
+  </script>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    .container {
+      padding: 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
-<body class="d-flex">
+<body>
 
-  <!-- Sidebar -->
-  <div class="sidebar d-flex flex-column p-4 bg-dark text-white vh-100 sticky-top">
-    <h2 class="fs-4 fw-bold mb-4">ActFinLab</h2>
-    <ul class="nav nav-pills flex-column mb-4">
-      <li class="nav-item mb-2"><a href="index.html" class="nav-link active">Αρχική</a></li>
-      <li class="nav-item mb-2"><a href="team.html" class="nav-link">Προσωπικό</a></li>
-      <li class="nav-item mb-2"><a href="courses.html" class="nav-link">Μαθήματα</a></li>
-      <li class="nav-item mb-2"><a href="objective.html" class="nav-link">Σκοπός</a></li>
-      <li class="nav-item mb-2"><a href="contact.html" class="nav-link">Επικοινωνία</a></li>
-    </ul>
+  <header>
+    <h1>ActFinLab</h1>
+    <p>Εργαστήριο Αναλογιστικών &amp; Χρηματοοικονομικών Μαθηματικών</p>
+  </header>
 
-    <hr class="text-white-50">
+  <nav>
+    <a href="#">Αρχική</a>
+    <a href="#">Προσωπικό</a>
+    <a href="#">Μαθήματα</a>
+    <a href="#">Σκοπός</a>
+    <a href="#">Επικοινωνία</a>
+  </nav>
 
-    <!-- Visitor Counter -->
-    <div class="mt-auto text-center">
-      <p class="mb-1 small">Συνολικές Επισκέψεις</p>
-      <h5 id="visitor-count" class="display-6 text-warning">0</h5>
-    </div>
-
-    <!-- Weather Widget -->
-    <div class="mt-4 p-3 bg-light text-dark rounded shadow-sm weather-widget text-center">
-      <h6 class="mb-1">Καιρός - Σάμος</h6>
-      <p class="mb-0" id="weather-info">Φόρτωση...</p>
-    </div>
+  <div class="container">
+    <h2>Γιατί να μας επισκεφθείτε;</h2>
+    <p>
+      Το ActFinLab είναι το εργαστήριο της Αναλογιστικής &amp; Χρηματοοικονομικής Επιστήμης στο Πανεπιστήμιο Αιγαίου.
+      Στοχεύουμε στην προώθηση της έρευνας και της εκπαίδευσης στους τομείς της Ασφαλιστικής Επιστήμης, 
+      των Χρηματοοικονομικών Μαθηματικών και της Διαχείρισης Κινδύνου.
+    </p>
   </div>
 
-  <!-- Main Content -->
-  <div class="flex-grow-1">
-    <!-- Hero Section -->
-    <section class="bg-primary text-white text-center py-5 hero">
-      <div class="container">
-        <h1 class="display-4 fw-bold">ActFinLab</h1>
-        <p class="lead mb-4">Εργαστήριο Αναλογιστικών &amp; Χρηματοοικονομικών Μαθηματικών</p>
-        <a href="about.html" class="btn btn-outline-light me-2">Περισσότερα</a>
-        <a href="contact.html" class="btn btn-light">Επικοινωνία</a>
-      </div>
-    </section>
+  <footer>
+    <p>&copy; 2025 ActFinLab – Πανεπιστήμιο Αιγαίου</p>
+  </footer>
 
-    <!-- Intro Section -->
-    <main class="container my-5">
-      <h2 class="mb-4">Γιατί να μας επισκεφθείτε;</h2>
-      <p class="lead mb-5">
-        Το ActFinLab είναι το εργαστήριο της Αναλογιστικής &amp; Χρηματοοικονομικής Επιστήμης στο Πανεπιστήμιο Αιγαίου.
-        Στοχεύουμε στην προώθηση της έρευνας και της εκπαίδευσης στους τομείς της Ασφαλιστικής Επιστήμης, των Χρηματοοικονομικών Μαθηματικών και της Διαχείρισης Κινδύνου.
-      </p>
-
-      <div class="row g-4 mt-3">
-        <div class="col-md-4" data-aos="fade-up">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Προσωπικό</h5>
-              <p class="card-text">Γνωρίστε τους ερευνητές και διδάσκοντες που μας κάνουν να ξεχωρίζουμε.</p>
-              <a href="team.html" class="btn btn-primary">Δείτε το Προσωπικό</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Μαθήματα</h5>
-              <p class="card-text">Εξερευνήστε τα μαθήματα που προσφέρουμε σε προπτυχιακό και μεταπτυχιακό επίπεδο.</p>
-              <a href="courses.html" class="btn btn-primary">Δείτε τα Μαθήματα</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Επικοινωνία</h5>
-              <p class="card-text">Θέλετε να μάθετε περισσότερα ή να συνεργαστείτε μαζί μας;</p>
-              <a href="contact.html" class="btn btn-primary">Επικοινωνήστε μαζί μας</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-      <p class="mb-0">&copy; 2025 ActFinLab – Πανεπιστήμιο Αιγαίου</p>
-    </footer>
-  </div>
-
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap @5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Visitor Counter -->
-  <script>
-    let count = localStorage.getItem('visitorCount') || 0;
-    count++;
-    localStorage.setItem('visitorCount', count);
-    document.getElementById('visitor-count').innerText = count;
-  </script>
-
-  <!-- Weather Widget -->
-  <script>
-    fetch('https://api.weatherapi.com/v1/current.json?key=98397ae8da42412c823150255251905&q=Samos ')
-      .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.json();
-      })
-      .then(data => {
-        const temp = data.current_condition[0].temp_C;
-        const condition = data.current_condition[0].weatherDesc[0].value;
-        document.getElementById("weather-info").innerHTML = `
-          <strong>${temp}°C</strong><br>
-          ${condition}
-        `;
-      })
-      .catch(error => {
-        console.error('Weather API error:', error);
-        document.getElementById("weather-info").innerHTML = `<strong>N/A</strong><br>Καιρός`;
-      });
-  </script>
 </body>
 </html>
